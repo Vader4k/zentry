@@ -54,7 +54,7 @@ body::-webkit-scrollbar {
   
   @font-face {
     font-family: "robert-regular";
-    src: url("/public/fonts/robert-regular.woff2") format('woff2');
+    src: url("/fonts/robert-regular.woff2") format('woff2');
   }
   
   @font-face {

@@ -19,7 +19,7 @@ const App = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <Hero />
-          <div className="h-[200vh] w-full bg-black" />
+          <div className="h-[200vh] w-full bg-white" />
         </div>
       </div>
     </main>

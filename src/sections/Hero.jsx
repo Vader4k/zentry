@@ -56,14 +56,14 @@ const Hero = () => {
       scrollTrigger: {
         trigger: "#video-frame",
         scrub: true,
-        start: "-20% top",
+        start: "top top",
       },
     });
 
     clipTl.to("#video-frame", {
-      duration: 1,
-      clipPath: "polygon(30% 0%, 70% 0%, 84% 100%, 0% 100%)",
-      ease: "power2.inOut",
+      clipPath: "polygon(14% 0%, 72% 0%, 90% 90%, 0% 100%)",
+      ease: "power1.inOut",
+      borderRadius: "0 0 40% 5%"
     });
   });
 
@@ -74,6 +74,7 @@ const Hero = () => {
         className="relative z-[100] h-full w-full overflow-hidden rounded-lg bg-blue75"
         style={{
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          borderRadius: "0 0 0 0"
         }}
       >
         <div>
