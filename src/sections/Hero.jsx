@@ -44,18 +44,37 @@ const Hero = () => {
         gsap.from("#current-video", {
           scale: 0.5,
           duration: 1.5,
-          ease: 'power1.inOut'
+          ease: "power1.inOut",
         });
       }
     },
     { dependencies: [currentIndex], revertOnUpdate: true }
   );
 
+  useGSAP(() => {
+    const clipTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#video-frame",
+        scrub: true,
+        start: "-20% top",
+      },
+    });
+
+    clipTl.to("#video-frame", {
+      duration: 1,
+      clipPath: "polygon(30% 0%, 70% 0%, 84% 100%, 0% 100%)",
+      ease: "power2.inOut",
+    });
+  });
+
   return (
     <section className="relative h-dvh w-screen overflow-x-clip">
       <div
         id="video-frame"
-        className="relative z-10 h-full w-full overflow-hidden rounded-lg bg-blue75"
+        className="relative z-[100] h-full w-full overflow-hidden rounded-lg bg-blue75"
+        style={{
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        }}
       >
         <div>
           <div className=" z-50 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-64 cursor-pointer overflow-clip rounded-lg">
