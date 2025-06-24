@@ -82,7 +82,7 @@ body::-webkit-scrollbar {
   }
 
   .mask-clip-path {
-    clip-path: polygon(1% 0, 86% 2%, 100% 93%, 0 100%);
+    clip-path: polygon(3% 0, 89% 0, 100% 91%, 0 100%);
   }
 
   .special-font {
@@ -95,22 +95,19 @@ body::-webkit-scrollbar {
   }
 
   .about-subtext {
-    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular text-lg md:max-w-[34rem];
+    @apply absolute bottom-[-92dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular text-lg md:max-w-[34rem];
   }
 
   .about-image {
-    @apply absolute left-1/2 top-0 z-20 h-[60vh] w-96 origin-center -translate-x-1/2 overflow-hidden md:w-[30vw];
+    @apply absolute left-1/2 top-10 z-20 h-[70vh] w-96 origin-center -translate-x-1/2 overflow-hidden md:w-[30vw];
   }
 
   .animated-title {
-    @apply flex flex-col gap-1 text-7xl uppercase leading-[.8] text-white sm:px-32 md:text-[6rem];
+    @apply  text-7xl uppercase leading-[.8] text-white sm:px-32 md:text-[6rem] w-full text-center text-wrap;
   }
 
   .animated-word {
-    @apply font-zentry font-black opacity-0;
-    transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
-    transform-origin: 50% 50% -150px !important;
-    will-change: opacity, transform;
+    @apply font-zentry font-black opacity-100;
   }
 
   .bento-tilt_1 {
@@ -132,7 +129,7 @@ body::-webkit-scrollbar {
 
   .story-img-mask {
     @apply absolute left-0 top-0 size-full overflow-hidden md:left-[20%] md:top-[-10%] md:size-4/5;
-    clip-path: polygon(4% 0, 83% 21%, 100% 73%, 0% 100%);
+    clip-path: polygon(3% 0, 72% 3%, 100% 91%, 0 100%);
   }
 
   .story-img-content {

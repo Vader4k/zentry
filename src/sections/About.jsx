@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import AnimatedTitle from "../components/AnimatedTitle";
 
 const About = () => {
   useGSAP(() => {
@@ -19,6 +20,7 @@ const About = () => {
         width: "100vw",
         height: "100vh",
         ease: "power1.inOut",
+        top: 0,
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       })
       .to(
@@ -26,6 +28,13 @@ const About = () => {
         {
           ease: "power1.inOut",
           scale: 1,
+        },
+        "<"
+      )
+      .to(
+        "#stones",
+        {
+          zIndex: 0,
         },
         "<"
       );
@@ -39,12 +48,12 @@ const About = () => {
         </p>
 
         <AnimatedTitle
-          title="Disc<b>o</b>ver the world's <br /> largest shared <b>a</b>dventure"
+          title="Discover the world's largest shared adventure"
           containerClass="mt-5 !text-black text-center"
         />
 
         <div className="about-subtext">
-          <p>The Game of Games begins—your life, now an epic MMORPG</p>
+          <p>The Meta Games begins—your life, now an epic MMORPG</p>
           <p className="text-gray-500">
             Zentry unites every player from countless games and platforms, both
             digital and physical, into a unified Play Economy
@@ -52,14 +61,20 @@ const About = () => {
         </div>
       </div>
 
-      <div className="h-dvh w-screen" id="clip">
+      <div className="h-dvh w-screen relative" id="clip">
         <div className="mask-clip-path about-image">
           <img
             src="img/about.webp"
             alt="Background"
-            className="bg-img absolute left-0 top-0 size-full object-cover scale-200"
+            className="bg-img absolute inset-0 size-full object-cover scale-200"
           />
         </div>
+        <img
+          id="stones"
+          src="/img/stones.webp"
+          alt="rocks"
+          className="absolute w-full z-20"
+        />
       </div>
     </section>
   );
