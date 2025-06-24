@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../components/Button";
 import { TiLocationArrow } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
@@ -63,18 +63,33 @@ const Hero = () => {
     clipTl.to("#video-frame", {
       clipPath: "polygon(14% 0%, 72% 0%, 90% 90%, 0% 100%)",
       ease: "power1.inOut",
-      borderRadius: "0 0 40% 5%"
+      borderRadius: "0 0 40% 5%",
     });
   });
 
+  useEffect(() => {
+    if (loadedVideos === totalVideos - 1) {
+      setIsLoading(false);
+    }
+  }, [loadedVideos]);
+
   return (
     <section className="relative h-dvh w-screen overflow-x-clip">
+      {isLoading && (
+        <div className="flex items-center justify-center absolute z-[100] inset-0 h-full w-full overflow-clip bg-violet-50">
+          <div className="three-body relative">
+            <div className="three-body__dot" />
+            <div className="three-body__dot" />
+            <div className="three-body__dot" />
+          </div>
+        </div>
+      )}
       <div
         id="video-frame"
-        className="relative z-[100] h-full w-full overflow-hidden rounded-lg bg-blue75"
+        className="relative z-10 h-full w-full overflow-hidden rounded-lg bg-blue75"
         style={{
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-          borderRadius: "0 0 0 0"
+          borderRadius: "0 0 0 0",
         }}
       >
         <div>
