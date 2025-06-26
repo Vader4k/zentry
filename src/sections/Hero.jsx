@@ -105,7 +105,6 @@ const Hero = () => {
                 muted
                 playsInline
                 id="current-video"
-                autoPlay
                 className="size-64 origin-center scale-150 object-cover object-center"
                 onLoadedData={handleVideoLoad}
               />
