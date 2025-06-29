@@ -169,7 +169,6 @@ body::-webkit-scrollbar {
 
 .indicator-line.active {
   animation: indicator-line 0.5s ease infinite;
-  animation-delay: calc(var(--animation-order) * 0.1s);
 }
 
 @keyframes indicator-line {

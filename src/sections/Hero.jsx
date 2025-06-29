@@ -134,7 +134,7 @@ const Hero = () => {
           />
         </div>
 
-        <h1 className="absolute bottom-5 right-5 z-40 uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem] text-blue75">
+        <h1 className="absolute !tracking-wider bottom-5 right-5 z-40 uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem] text-blue75">
           G<b>a</b>ming
         </h1>
         <div className="absolute left-0 top-0 z-40 size-full">

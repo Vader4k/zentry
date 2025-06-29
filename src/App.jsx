@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import About from "./sections/About";
 import Navbar from "./components/Navbar";
+import Features from "./sections/Features";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -23,7 +24,7 @@ const App = () => {
         <div id="smooth-content">
           <Hero />
           <About />
-          <div className="h-[200vh]" />
+          <Features />
         </div>
       </div>
     </main>

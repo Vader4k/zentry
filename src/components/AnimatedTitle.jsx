@@ -11,10 +11,9 @@ const AnimatedTitle = ({ title, containerClass }) => {
 
     const contentTl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#about",
+        trigger: "#titles",
         start: "top bottom",
         scrub: 1.5,
-        end: "40% bottom",
       },
     });
 
@@ -27,6 +26,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
       z: -60,
       transformOrigin: "50% 50% -150px",
       ease: "power1.inOut",
+      duration: 0.6
     });
   });
 
